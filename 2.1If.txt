@@ -1,0 +1,38 @@
+Program Ej1_IF (input, output);
+Uses crt;
+Var
+   n1,n2:integer;
+
+begin
+ writeln('Dados dos numeros distintos, mostrarlos ordenados de forma creciente.');
+ writeln;
+ write('Ingrese el primer numero: ');readln(n1);
+ writeln;
+ write('Ingrese el segundo numero distinto del anterior: ');readln(n2);
+ writeln;
+   If(n1=n2)then
+      begin
+         writeln ('Usted ha cargado dos numeros iguales, intente nuevamente...')
+      end
+            else
+   If(n1<n2)then
+      begin
+         writeln('Los numeros ingresados de forma creciente son: ',n1,' y ',n2);
+      end
+            else
+   If(n2<n1)then
+      begin
+        writeln('Los numeros ingresados de forma creciente son: ',n2,' y ',n1);
+      end;
+
+     writeln;
+     writeln;
+     writeln;
+     writeln;
+     writeln;
+     writeln;
+     writeln;
+     writeln('Juan Beltrame@copyright 2020');
+     writeln('Presiones una tecla para salir del programa...');
+     readkey;
+end.
