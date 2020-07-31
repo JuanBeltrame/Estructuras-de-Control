@@ -1,0 +1,38 @@
+Program Ej2_If(input, output);
+Uses crt;
+Var
+   n:Integer;
+
+begin
+ writeln('Dado un numero determinar si es positivo o negativo.');
+ writeln;
+ writeln;
+ write('Ingrese su numero: ');readln(n);
+ writeln;
+ If (n=0)then
+    begin
+     write('El 0 no es positivo ni tampoco negativo, pruebe con otro numero...');
+    end
+         else
+    begin
+  If(n>0)then
+     begin
+     write('Su numero ingresado es POSITIVO...');
+     end
+         else
+     begin
+     write ('Su numero ingresado es NEGATIVO...');
+    end
+     end;
+
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln('Juan Beltrame@copyright 2020');
+ writeln('Presiones una tecla para salir del programa... ');
+ readkey;
+end.
