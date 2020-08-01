@@ -1,0 +1,81 @@
+Program Ej6_If(input, output);
+Uses crt;
+Var
+   L1,L2,L3:CHAR;
+
+begin
+write('Hola Bienvenide, me llamo Lucy y sere tu asistente virtual en este programa...');
+writeln;
+writeln;
+writeln;
+writeln('Ingrese tres letras mayusculas y mostrarlas ordenadas alfabeticamente');
+writeln;
+write('Ingrese la primera letra: ');
+readln(L1);
+write('Ingrese la segunda letra: ');
+readln(L2);
+write('Ingrese la tercera letra: ');
+readln(L3);
+writeln;
+  If((L1=L2)And(L1=L3)And(L2=L3))then
+      begin
+           Writeln('ERROR:Las tres letras que ingreso han sido iguales, Intente nuevamente...');
+      end
+  else
+      begin
+        If((L3<L1)and(L1<L2))then
+            begin
+                 writeln(L3,', ',L1,', ',L2);
+            end
+        else
+            begin
+                 if ((L2<L1) AND (L1<L3))then
+                    begin
+                         writeln(L2,', ',L1,', ',L3);
+                    end
+                 else
+                    begin
+                         if ((L3<L2)and(L2<L1))then
+                            begin
+                                 writeln(L3,', ',L2,', ',L1);
+                            end
+                         else
+                            begin
+                                 if ((L1<L2)and(L2<L3))then
+                                    begin
+                                         writeln(L1,', ',l2,', ',l3);
+                                    end
+                                 else
+                                    begin
+                                         if ((l1<l3)and(l3<l2))then
+                                            begin
+                                                 writeln(L1,', ',l3,', ',l2);
+                                            end
+                                         else
+                                            begin
+                                                 if((l2<l3)and(l3<l1))then
+                                                   begin
+                                                        writeln(L2,', ',l3,', ',l1);
+                                                   end
+                                                 else
+                                                   begin
+                                                        writeln(L3,', ',l1,', ',l2);
+                                                   end
+                                            end
+                                    end
+                            end
+                    end
+            end
+      end;
+///////////////////////////////////////////////////////////////////////////////////////////////
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln('Juan Beltrame@copyright 2020');
+ writeln('Presiones una tecla para salir del programa... ');
+ readkey;
+end.
