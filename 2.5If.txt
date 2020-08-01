@@ -1,0 +1,49 @@
+Program Ej2_5_IF(input, output);
+Uses crt;
+Var
+   n1,n2,n3:Integer;
+
+begin
+ write('Hola Bienvenido, me llamo Lucy y sere tu asistente virtual en este programa...');
+ writeln;
+ writeln;
+ writeln;
+ write('Determinar si el primero de un conjunto de tres numeros dados, es menor que los otros dos.');
+ writeln;
+ writeln;
+ write('Ingrese el primer numero: ');
+ Readln(n1);
+ write('Ingrese el segundo numero: ');
+ Readln(n2);
+ write('Ingrese el tercer numero: ');
+ Readln(n3);
+ If((n1=n2)and(n2=n3)and(n2=n3))then 
+  begin
+    writeln('Error: Los tres numeros deben ser diferentes: ');
+  end
+ else
+  begin
+   If((n1<n2)and(n1<n3))then
+		begin 
+            writeln;
+            writeln;
+			Writeln('Felicitaciones! el primer numero que usted ingreso es menor a los otros dos');
+		end
+   else
+		begin
+            writeln;
+            writeln;
+			writeln('El primer numero no es menor al resto de los otros numeros ingresados, lo siento. intente probar de nuevo.');
+		end
+  end;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln('Juan Beltrame@copyright 2020');
+ writeln('Presiones una tecla para salir del programa... ');
+ readkey;
+end.
