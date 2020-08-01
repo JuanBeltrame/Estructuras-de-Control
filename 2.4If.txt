@@ -1,0 +1,39 @@
+Program Ej4_If(input, output);
+Uses crt;
+Var
+   n1,n2,n3:Integer;
+
+begin
+writeln('Ingresar tres numeros distintos. Determinar y mostrar si ingresaron en orden creciente');
+writeln;
+write('Ingrese el 1er Numero: ');readln(n1);
+write('Ingrese el 2do Numero: ');readln(n2);
+write('Ingrese el 3er Numero: ');readln(n3);
+writeln;
+  If((n1=n2)And(n1=n3)And(n2=n3))then
+     begin
+      Writeln('ERROR:Los tres numeros que ingreso han sido iguales, Intente nuevamente...');
+     end
+                                 else
+     begin
+      If((n1<n2)and(n2<n3))then
+        begin
+         writeln('Los tres numeros han ingresado en orden creciente ');
+        end
+                           else
+        begin
+         Writeln('ERROR:No han ingresado de forma creciente, Intente nuevamente...');
+        end
+      end;
+
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln('Juan Beltrame@copyright 2020');
+ writeln('Presiones una tecla para salir del programa... ');
+ readkey;
+end.
