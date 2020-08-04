@@ -1,0 +1,61 @@
+Program Ej11_IF (input, output);
+Uses crt;
+Var
+   Kw,Importe:Real;
+
+begin
+write('Hola Bienvenido/a, me llamo Lucy y sere tu asistente virtual en este programa...');
+writeln;
+writeln;
+writeln;
+writeln('Dado como dato la cantidad de Kilovatios consumidos por un usuario en un mes calcular el importe a pagar por el mismo teniendo en cuenta que: ');
+writeln('Si la cantidad de Kilovatios consumidos es menor o igual a 200, el precio del Kilovatio es de 0,05 pesos.');
+writeln('Si la cantidad de Kilovatios consumidos es mayor que 200 y menor que 1000, el precio del Kilovatio es de 0,1 pesos.');
+writeln('Si la cantidad de Kilovatios consumidos es mayor o igual que 1000, el precio del Kilowatio es de 0,15 pesos');
+writeln;
+writeln;
+writeln;
+write('Ingrese la cantidad de Kilovatios consumidos durante el periodo de 30 dias: ');
+Readln(Kw);
+ If(kw=0)then
+   begin
+     writeln;
+     writeln;
+     writeln('Usted no ha consumido nada, aparentemente ha estado robando la luz, por que eso es imposible...');
+     writeln('Ya esta yendo la policia para su domicilio...');
+   end
+ else
+   begin
+     If((Kw>=1)And(Kw<=200))then
+	   begin
+        Importe:=Kw*0.05;
+        writeln('Lo que el usuario debe pagar por la cantidad de KW utilizados en este periodo es de:  ',Importe);
+       end
+     else
+       begin
+         If(Kw>=1000)then
+           begin
+            Importe:=Kw*0.15;
+            writeln('Lo que el usuario debe pagar por la cantidad de KW utilizados en este periodo es de:  ',Importe);
+           end
+         else
+           begin
+	         If((200<kw)AND(kw<1000))then
+               begin
+                 Importe:=Kw*0.1;
+                 writeln('Lo que el usuario debe pagar por la cantidad de KW utilizados en este periodo es de:  ',Importe);
+               end
+           end
+       end
+   end;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln;
+ writeln('Juan Beltrame@copyright 2020');
+ writeln('Presiones una tecla para salir del programa... ');
+ readkey;
+end.
