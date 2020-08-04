@@ -1,0 +1,63 @@
+Program Ej7_if (Input, Output);
+Uses Crt; 
+Var
+	TP:Char;
+	Med:Real;
+Begin 
+write('Hola Bienvenide, me llamo Lucy y sere tu asistente virtual en este programa...');
+writeln;
+writeln;
+writeln;
+writeln ('Se desea controlar en una fabrica la calidad de dos tipos de piezas que denominaremos A y B.');
+writeln (' a. Se dan como datos el tipo de piezas y su medida en milimetros');
+writeln (' b. Se debe indicar si cumple con las especificaciones sabiendo que: ');
+writeln (' c. Las piezas de tipo A deben medir 165mm y se admite un error de +/-2mm.'); 
+writeln (' d. Las piezas de tipo B deben medir 180mm y se admite un error de +/-3mm.'); 
+writeln;
+writeln ('Ingrese el tipo de Pieza A o B'); 
+Readln (TP);
+ If((TP='A')or(TP='B'))then
+	begin
+	   If(TP='A')then
+		  begin 
+		     writeln('Ingrese la medida de la pieza A: ');
+				readln(Med);
+					If((163<=Med)And(Med<=168))then
+					  Begin
+						 writeln('La Pieza A fue cargada al sistema satisfactoriamente');
+					  end
+					Else
+					  begin
+					    writeln('La Pieza A ha venido con una medida incorrecta');
+					  end
+		  end
+	   Else
+       begin 
+          writeln('Ingrese la medida de la pieza B: ');
+          readln(Med);
+					If((Med<127)or(183<med))then
+					  begin
+					    writeln('La Pieza B ha venido con una medida incorrecta');
+					  end
+					Else
+					  begin 
+					    writeln('La Pieza B fue cargada al sistema satisfactoriamente');
+					  end
+       end
+	end		
+ Else 
+	begin 
+    writeln ('El tipo de pieza que ingreso no se encuentra en el sistema...');
+	end;
+
+writeln;
+writeln;
+writeln;
+writeln;
+writeln;
+writeln;
+writeln;
+writeln('Juan Beltrame@copyright 2020');
+writeln('Presiones una tecla para salir del programa... ');
+readkey;
+end.
